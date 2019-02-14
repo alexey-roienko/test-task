@@ -1,0 +1,6 @@
+# Gitignore-file for removing from tracking the 'build' folder
+build/
+# but remain tracking of program .exe file
+!build/*.exe
+# And also no need to track the task doc-file
+C++2FCV developer test assigment.docx
