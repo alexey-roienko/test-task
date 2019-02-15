@@ -1,4 +1,5 @@
-/*! \class Visualizer
+/*! \file Visualizer.cpp
+	\class Visualizer Visualizer.cpp "/scr/Visualizer.cpp"
     \brief Displays the test image as well as calculated image binary mask
 
     Class displays the test image as well as calculated image binary mask

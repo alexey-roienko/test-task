@@ -1,0 +1,328 @@
+\hypertarget{class_visualizer}{}\section{Visualizer Class Reference}
+\label{class_visualizer}\index{Visualizer@{Visualizer}}
+
+
+Displays the test image as well as calculated image binary mask.  
+
+
+
+
+{\ttfamily \#include \char`\"{}/scr/\+Visualizer.\+cpp\char`\"{}}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visualizer_a99f4d8a99e88e67c69060df5a105948e}{Visualizer}} (const std\+::string \&\+\_\+f\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_visualizer_ac41cc9dbf7c06e138dc81ebe62c233ad}{read\+Base\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Methods reads test (base) image using its filename and shows it in window. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_visualizer_a93211a160c72d44453133c91b1495b15}{get\+Base\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Getter for test (base) image. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_visualizer_a9bc45fad9eed11417648dc2aa45b0ed3}{show\+Base\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Visualize the test (base) image in a window. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_visualizer_a0bed72124e97396cbcf6bd76feacfa3e}{get\+Mask\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Getter for mask (binary, output) image. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_visualizer_ac7312a98d67cd0cc8f3d7e99fb5cfca9}{show\+Mask\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Visualize the mask (binary, output) image in a window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_visualizer_ac32b38bcdeeeeb584b7a711ab4b1f5aa}{start\+Processing}} (uint8\+\_\+t, double)
+\begin{DoxyCompactList}\small\item\em Main function of the utility. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_visualizer_a3fc264f00e663adfcf5abe46bc72933b}{m\+Callback}} (int, int)
+\begin{DoxyCompactList}\small\item\em One of the main functions of the utility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_visualizer_a747f6b8f8d114aa96672220c8f3d8c5d}{m\+Callback\+\_\+\+Func}} (int, int, int, int, void $\ast$)
+\begin{DoxyCompactList}\small\item\em One of the main functions of the utility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_visualizer_a582bb477be7e586971f02c2c8f687179}{f\+Name}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains input test image filename. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_visualizer_a5e171a5b9a1998982fac95f07cacd610}{base\+Img}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains input test image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_converter}{Converter}} \mbox{\hyperlink{class_visualizer_a0b885971fbf27caee743c7f5e9c18566}{conv\+Obj}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains \mbox{\hyperlink{class_converter}{Converter}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Displays the test image as well as calculated image binary mask. 
+
+Class displays the test image as well as calculated image binary mask 
+
+Definition at line 16 of file Visualizer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_visualizer_a99f4d8a99e88e67c69060df5a105948e}\label{class_visualizer_a99f4d8a99e88e67c69060df5a105948e}} 
+\index{Visualizer@{Visualizer}!Visualizer@{Visualizer}}
+\index{Visualizer@{Visualizer}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{Visualizer()}{Visualizer()}}
+{\footnotesize\ttfamily Visualizer\+::\+Visualizer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+f\+Name }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+f\+Name} & -\/ filename of the input test color image \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file Visualizer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_visualizer_a93211a160c72d44453133c91b1495b15}\label{class_visualizer_a93211a160c72d44453133c91b1495b15}} 
+\index{Visualizer@{Visualizer}!getBaseImg@{getBaseImg}}
+\index{getBaseImg@{getBaseImg}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{getBaseImg()}{getBaseImg()}}
+{\footnotesize\ttfamily cv\+::\+Mat Visualizer\+::get\+Base\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for test (base) image. 
+
+
+
+Definition at line 43 of file Visualizer.\+cpp.
+
+
+
+References base\+Img.
+
+\mbox{\Hypertarget{class_visualizer_a0bed72124e97396cbcf6bd76feacfa3e}\label{class_visualizer_a0bed72124e97396cbcf6bd76feacfa3e}} 
+\index{Visualizer@{Visualizer}!getMaskImg@{getMaskImg}}
+\index{getMaskImg@{getMaskImg}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{getMaskImg()}{getMaskImg()}}
+{\footnotesize\ttfamily cv\+::\+Mat Visualizer\+::get\+Mask\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for mask (binary, output) image. 
+
+
+
+Definition at line 61 of file Visualizer.\+cpp.
+
+
+
+References conv\+Obj, and Converter\+::get\+Mask\+Img().
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{class_visualizer_a3fc264f00e663adfcf5abe46bc72933b}\label{class_visualizer_a3fc264f00e663adfcf5abe46bc72933b}} 
+\index{Visualizer@{Visualizer}!mCallback@{mCallback}}
+\index{mCallback@{mCallback}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{mCallback()}{mCallback()}}
+{\footnotesize\ttfamily void Visualizer\+::m\+Callback (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+One of the main functions of the utility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ X coordinate of mouse position in the window while clicking \\
+\hline
+{\em y} & -\/ Y coordinate of mouse position in the window while clicking \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 114 of file Visualizer.\+cpp.
+
+
+
+References conv\+Obj, Def\+Params\+::\+D\+E\+B\+UG, Converter\+::find\+Region(), Converter\+::reset\+Mask\+Img(), Converter\+::set\+Point(), and Converter\+::show\+Mask\+Img().
+
+\mbox{\Hypertarget{class_visualizer_a747f6b8f8d114aa96672220c8f3d8c5d}\label{class_visualizer_a747f6b8f8d114aa96672220c8f3d8c5d}} 
+\index{Visualizer@{Visualizer}!mCallback\_Func@{mCallback\_Func}}
+\index{mCallback\_Func@{mCallback\_Func}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{mCallback\_Func()}{mCallback\_Func()}}
+{\footnotesize\ttfamily void Visualizer\+::m\+Callback\+\_\+\+Func (\begin{DoxyParamCaption}\item[{int}]{event,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{flag,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+One of the main functions of the utility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ the type of the mouse activity, int \\
+\hline
+{\em x} & -\/ X coordinate of mouse position in the window while clicking \\
+\hline
+{\em y} & -\/ Y coordinate of mouse position in the window while clicking \\
+\hline
+{\em flag} & -\/ flag parameter (didn\textquotesingle{}t use it) \\
+\hline
+{\em param} & -\/ pointer for transferring user data if necessary (used it to send the pointer to the Visualizer-\/object) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file Visualizer.\+cpp.
+
+
+
+Referenced by start\+Processing().
+
+\mbox{\Hypertarget{class_visualizer_ac41cc9dbf7c06e138dc81ebe62c233ad}\label{class_visualizer_ac41cc9dbf7c06e138dc81ebe62c233ad}} 
+\index{Visualizer@{Visualizer}!readBaseImg@{readBaseImg}}
+\index{readBaseImg@{readBaseImg}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{readBaseImg()}{readBaseImg()}}
+{\footnotesize\ttfamily bool Visualizer\+::read\+Base\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methods reads test (base) image using its filename and shows it in window. 
+
+
+
+Definition at line 23 of file Visualizer.\+cpp.
+
+
+
+References base\+Img, and f\+Name.
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{class_visualizer_a9bc45fad9eed11417648dc2aa45b0ed3}\label{class_visualizer_a9bc45fad9eed11417648dc2aa45b0ed3}} 
+\index{Visualizer@{Visualizer}!showBaseImg@{showBaseImg}}
+\index{showBaseImg@{showBaseImg}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{showBaseImg()}{showBaseImg()}}
+{\footnotesize\ttfamily bool Visualizer\+::show\+Base\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Visualize the test (base) image in a window. 
+
+
+
+Definition at line 49 of file Visualizer.\+cpp.
+
+
+
+References base\+Img.
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{class_visualizer_ac7312a98d67cd0cc8f3d7e99fb5cfca9}\label{class_visualizer_ac7312a98d67cd0cc8f3d7e99fb5cfca9}} 
+\index{Visualizer@{Visualizer}!showMaskImg@{showMaskImg}}
+\index{showMaskImg@{showMaskImg}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{showMaskImg()}{showMaskImg()}}
+{\footnotesize\ttfamily bool Visualizer\+::show\+Mask\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Visualize the mask (binary, output) image in a window. 
+
+
+
+Definition at line 67 of file Visualizer.\+cpp.
+
+
+
+References conv\+Obj, and Converter\+::show\+Mask\+Img().
+
+\mbox{\Hypertarget{class_visualizer_ac32b38bcdeeeeb584b7a711ab4b1f5aa}\label{class_visualizer_ac32b38bcdeeeeb584b7a711ab4b1f5aa}} 
+\index{Visualizer@{Visualizer}!startProcessing@{startProcessing}}
+\index{startProcessing@{startProcessing}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{startProcessing()}{startProcessing()}}
+{\footnotesize\ttfamily bool Visualizer\+::start\+Processing (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cl\+Dist\+Type,  }\item[{double}]{cl\+Dist\+Thr }\end{DoxyParamCaption})}
+
+
+
+Main function of the utility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+Dist\+Type} & -\/ type of the color distance to be applied \\
+\hline
+{\em cl\+Dist\+Thr} & -\/ threshold value for the color distance to be applied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Visualizer.\+cpp.
+
+
+
+References base\+Img, conv\+Obj, m\+Callback\+\_\+\+Func(), Converter\+::set\+Base\+Img(), and Converter\+::set\+Params().
+
+
+
+Referenced by main().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_visualizer_a5e171a5b9a1998982fac95f07cacd610}\label{class_visualizer_a5e171a5b9a1998982fac95f07cacd610}} 
+\index{Visualizer@{Visualizer}!baseImg@{baseImg}}
+\index{baseImg@{baseImg}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{baseImg}{baseImg}}
+{\footnotesize\ttfamily cv\+::\+Mat Visualizer\+::base\+Img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains input test image. 
+
+
+
+Definition at line 22 of file Visualizer.\+h.
+
+
+
+Referenced by get\+Base\+Img(), read\+Base\+Img(), show\+Base\+Img(), and start\+Processing().
+
+\mbox{\Hypertarget{class_visualizer_a0b885971fbf27caee743c7f5e9c18566}\label{class_visualizer_a0b885971fbf27caee743c7f5e9c18566}} 
+\index{Visualizer@{Visualizer}!convObj@{convObj}}
+\index{convObj@{convObj}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{convObj}{convObj}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_converter}{Converter}} Visualizer\+::conv\+Obj\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains \mbox{\hyperlink{class_converter}{Converter}} object. 
+
+
+
+Definition at line 24 of file Visualizer.\+h.
+
+
+
+Referenced by get\+Mask\+Img(), m\+Callback(), show\+Mask\+Img(), and start\+Processing().
+
+\mbox{\Hypertarget{class_visualizer_a582bb477be7e586971f02c2c8f687179}\label{class_visualizer_a582bb477be7e586971f02c2c8f687179}} 
+\index{Visualizer@{Visualizer}!fName@{fName}}
+\index{fName@{fName}!Visualizer@{Visualizer}}
+\subsubsection{\texorpdfstring{fName}{fName}}
+{\footnotesize\ttfamily std\+::string Visualizer\+::f\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains input test image filename. 
+
+
+
+Definition at line 20 of file Visualizer.\+h.
+
+
+
+Referenced by read\+Base\+Img().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_visualizer_8h}{Visualizer.\+h}}\item 
+src/\mbox{\hyperlink{_visualizer_8cpp}{Visualizer.\+cpp}}\end{DoxyCompactItemize}

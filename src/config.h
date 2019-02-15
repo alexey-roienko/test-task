@@ -13,21 +13,21 @@ namespace DefParams {
 	constexpr bool DEBUG = false;
 	/*! \param DEFAULT_FNAME Default test image name */
 	constexpr const char* DEFAULT_FNAME = "test_colored_pils.png";
-	/*! \param DEFAULT_CLDIST_TYPE Default type of color distance metric 
-		0 - Simple RGB Euclidian distance
-		1 - Simple RGB Euclidian distance with weights (2, 4, 3 for RGB)
-		2 - Advanced RGB Euclidian distance with weights (2, 4, 3 for RGB) and additional coefficient
-		4 - Simple LAB distance, CIE76
-		5 - Advanced LAB distance, CIE94
+	/*! \param DEFAULT_CLDIST_TYPE Default type of color distance metric\n 
+		0 - Simple RGB Euclidian distance\n
+		1 - Simple RGB Euclidian distance with weights (2, 4, 3 for RGB)\n
+		2 - Advanced RGB Euclidian distance with weights (2, 4, 3 for RGB) and additional coefficient\n
+		4 - Simple LAB distance, CIE76\n
+		5 - Advanced LAB distance, CIE94\n
 		All distance metrics are taken from Wiki - https://en.wikipedia.org/wiki/Color_difference
 	*/
 	constexpr uint8_t DEFAULT_CLDIST_TYPE = 4;
-	/*! \param DEFAULT_CLDIST_THRD Default value of color distance metric threshold
-		for type 0 try: 40
-		for type 1 try:
-		for type 2 try: 4000
-		for type 3 try: 20
-		for type 4 try: 120
+	/*! \param DEFAULT_CLDIST_THRD Default value of color distance metric threshold\n
+		for type 0 try: 40\n
+		for type 1 try: 60\n
+		for type 2 try: 4000\n
+		for type 3 try: 20\n
+		for type 4 try: 120\n
 		Note that THRD values are squared comparing to the formulas in Wiki, for calculation simplicity.
 	*/
 	constexpr double DEFAULT_CLDIST_THRD = 120;

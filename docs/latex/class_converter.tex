@@ -1,0 +1,509 @@
+\hypertarget{class_converter}{}\section{Converter Class Reference}
+\label{class_converter}\index{Converter@{Converter}}
+
+
+Header of class \mbox{\hyperlink{class_converter}{Converter}}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}/src/\+Converter.\+cpp\char`\"{}}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_converter_aaa67c7d2770c60fc2fa85fccb6f8a1fc}{Converter}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_converter_ae1915b3a733528dc6a99582de4e9c8bb}{Converter}} (const cv\+::\+Mat \&, bool)
+\begin{DoxyCompactList}\small\item\em Main constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_converter_a96069954f786607da376b96401815216}{set\+Params}} (uint8\+\_\+t, double)
+\begin{DoxyCompactList}\small\item\em Setter for parameters for pixel comparing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_converter_aad973b1f41c37039e66c33a60cf28e39}{set\+Debug}} (bool)
+\begin{DoxyCompactList}\small\item\em Setter for Debug. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_converter_afc5aa4ae2b38f0dd8d9418ced905e69d}{set\+Base\+Img}} (const cv\+::\+Mat \&)
+\begin{DoxyCompactList}\small\item\em Setter for base Image. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_converter_a1038402549bb55951554c6b45740137f}{get\+Mask\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Getter -\/ Returns \textquotesingle{}mask\+Img\textquotesingle{} content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_converter_afccc063ddf93903141b1fb629a7e1252}{show\+Mask\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Shows Image in Window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_converter_a5d4c43bb79d93081b0359b9821ab83ba}{reset\+Mask\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Reset Mask image to initial state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_converter_acc71625f678e032dbdd3c17e58580e4f}{set\+Point}} (const cv\+::\+Point \&)
+\begin{DoxyCompactList}\small\item\em Set Pixel point to be processed by main function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_converter_a4d50ec2ab4621cfc3b36f29f54e16a0b}{find\+Region}} ()
+\begin{DoxyCompactList}\small\item\em Main function for finding the contiguous region. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_converter_a16df47c8a58a1c7b3818c9a2520e3a4b}{check\+Px\+Pos}} (int px\+Row, int px\+Col)
+\begin{DoxyCompactList}\small\item\em Check the position of the pixel at hand; whether it is inside of image borders or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_converter_ab13b0858bbf310073492f77dc7be48b0}{check\+Px\+Mask}} (int px\+Row, int px\+Col)
+\begin{DoxyCompactList}\small\item\em Check the value of the current pixel on the mask -\/ have we already checked it or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_converter_a29aedc9ca721def180a994abd6d299a4}{check\+Px\+Color}} (int px\+Row, int px\+Col)
+\begin{DoxyCompactList}\small\item\em Check the color value of the current pixel. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_converter_aa5b0afd52a0319cb627360032a98bf80}{calc\+Pixel\+Distance}} (const cv\+::\+Vec3b \&px2\+Comp, const cv\+::\+Vec3b \&init\+Px, uint8\+\_\+t dist\+Type)
+\begin{DoxyCompactList}\small\item\em Main method which calculates the distance between pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_converter_a18f46c46afdfdbca3164cfe21b7f396d}{base\+Img}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains input test image. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_converter_a242e40c925fedcc92959bc76d24c77d5}{mask\+Img}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains obtained mask image. \end{DoxyCompactList}\item 
+cv\+::\+Point \mbox{\hyperlink{class_converter_af5ef027f6fd12d21306f669275664497}{px\+Pos}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains position of pixel selected by user. \end{DoxyCompactList}\item 
+cv\+::\+Vec3b \mbox{\hyperlink{class_converter_acf7b32e1932bc6c2bbbe7397c9f3e5c1}{px\+Val}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains the color values of pixel selected by user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_converter_a74f8e7af0fc2b296e50d29d0cc5f3651}{debug}} = \mbox{\hyperlink{namespace_def_params_a7e97783bd3e1a571a7f6c2297cbcd17c}{Def\+Params\+::\+D\+E\+B\+UG}}
+\begin{DoxyCompactList}\small\item\em Private variable, whether output debug info or not. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_converter_a5d6037707465f267e1588735244be710}{cl\+Dist\+Type}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains inputed type of the color distance to be applied. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_converter_a1e0bff93aec2544cdecfb00db1006d0d}{cl\+Dist\+Thr}}
+\begin{DoxyCompactList}\small\item\em Private variable, contains inputed threshold value of the chosen color distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header of class \mbox{\hyperlink{class_converter}{Converter}}. 
+
+Class calculates the contiguous region and converts it to the binary (mask) image. 
+
+Definition at line 15 of file Converter.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_converter_aaa67c7d2770c60fc2fa85fccb6f8a1fc}\label{class_converter_aaa67c7d2770c60fc2fa85fccb6f8a1fc}} 
+\index{Converter@{Converter}!Converter@{Converter}}
+\index{Converter@{Converter}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{Converter()}{Converter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Converter\+::\+Converter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_converter_ae1915b3a733528dc6a99582de4e9c8bb}\label{class_converter_ae1915b3a733528dc6a99582de4e9c8bb}} 
+\index{Converter@{Converter}!Converter@{Converter}}
+\index{Converter@{Converter}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{Converter()}{Converter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Converter\+::\+Converter (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{\+\_\+img,  }\item[{bool}]{\+\_\+debug = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Main constructor. 
+
+Constructor of the class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+img} & -\/ input test color image \\
+\hline
+{\em \+\_\+debug} & -\/ debug information switcher \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Converter.\+cpp.
+
+
+
+References base\+Img, and mask\+Img.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_converter_aa5b0afd52a0319cb627360032a98bf80}\label{class_converter_aa5b0afd52a0319cb627360032a98bf80}} 
+\index{Converter@{Converter}!calcPixelDistance@{calcPixelDistance}}
+\index{calcPixelDistance@{calcPixelDistance}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{calcPixelDistance()}{calcPixelDistance()}}
+{\footnotesize\ttfamily double Converter\+::calc\+Pixel\+Distance (\begin{DoxyParamCaption}\item[{const cv\+::\+Vec3b \&}]{px2\+Comp,  }\item[{const cv\+::\+Vec3b \&}]{init\+Px,  }\item[{uint8\+\_\+t}]{dist\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Main method which calculates the distance between pixels. 
+
+
+
+Definition at line 188 of file Converter.\+cpp.
+
+
+
+References debug, Def\+Params\+::\+F\+R256, Def\+Params\+::\+K1, Def\+Params\+::\+K2, Def\+Params\+::k\+\_\+L, and Def\+Params\+::\+SL.
+
+
+
+Referenced by check\+Px\+Color().
+
+\mbox{\Hypertarget{class_converter_a29aedc9ca721def180a994abd6d299a4}\label{class_converter_a29aedc9ca721def180a994abd6d299a4}} 
+\index{Converter@{Converter}!checkPxColor@{checkPxColor}}
+\index{checkPxColor@{checkPxColor}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{checkPxColor()}{checkPxColor()}}
+{\footnotesize\ttfamily bool Converter\+::check\+Px\+Color (\begin{DoxyParamCaption}\item[{int}]{px\+Row,  }\item[{int}]{px\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check the color value of the current pixel. 
+
+
+
+Definition at line 166 of file Converter.\+cpp.
+
+
+
+References base\+Img, calc\+Pixel\+Distance(), cl\+Dist\+Thr, cl\+Dist\+Type, debug, mask\+Img, and px\+Val.
+
+
+
+Referenced by find\+Region().
+
+\mbox{\Hypertarget{class_converter_ab13b0858bbf310073492f77dc7be48b0}\label{class_converter_ab13b0858bbf310073492f77dc7be48b0}} 
+\index{Converter@{Converter}!checkPxMask@{checkPxMask}}
+\index{checkPxMask@{checkPxMask}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{checkPxMask()}{checkPxMask()}}
+{\footnotesize\ttfamily bool Converter\+::check\+Px\+Mask (\begin{DoxyParamCaption}\item[{int}]{px\+Row,  }\item[{int}]{px\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check the value of the current pixel on the mask -\/ have we already checked it or not. 
+
+
+
+Definition at line 150 of file Converter.\+cpp.
+
+
+
+References debug, and mask\+Img.
+
+
+
+Referenced by find\+Region().
+
+\mbox{\Hypertarget{class_converter_a16df47c8a58a1c7b3818c9a2520e3a4b}\label{class_converter_a16df47c8a58a1c7b3818c9a2520e3a4b}} 
+\index{Converter@{Converter}!checkPxPos@{checkPxPos}}
+\index{checkPxPos@{checkPxPos}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{checkPxPos()}{checkPxPos()}}
+{\footnotesize\ttfamily bool Converter\+::check\+Px\+Pos (\begin{DoxyParamCaption}\item[{int}]{px\+Row,  }\item[{int}]{px\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check the position of the pixel at hand; whether it is inside of image borders or not. 
+
+
+
+Definition at line 135 of file Converter.\+cpp.
+
+
+
+References base\+Img, and debug.
+
+
+
+Referenced by find\+Region().
+
+\mbox{\Hypertarget{class_converter_a4d50ec2ab4621cfc3b36f29f54e16a0b}\label{class_converter_a4d50ec2ab4621cfc3b36f29f54e16a0b}} 
+\index{Converter@{Converter}!findRegion@{findRegion}}
+\index{findRegion@{findRegion}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{findRegion()}{findRegion()}}
+{\footnotesize\ttfamily bool Converter\+::find\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function for finding the contiguous region. 
+
+Find\+Region function -\/ the main one. 
+
+Definition at line 88 of file Converter.\+cpp.
+
+
+
+References check\+Px\+Color(), check\+Px\+Mask(), check\+Px\+Pos(), mask\+Img, and px\+Pos.
+
+
+
+Referenced by Visualizer\+::m\+Callback().
+
+\mbox{\Hypertarget{class_converter_a1038402549bb55951554c6b45740137f}\label{class_converter_a1038402549bb55951554c6b45740137f}} 
+\index{Converter@{Converter}!getMaskImg@{getMaskImg}}
+\index{getMaskImg@{getMaskImg}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{getMaskImg()}{getMaskImg()}}
+{\footnotesize\ttfamily cv\+::\+Mat Converter\+::get\+Mask\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter -\/ Returns \textquotesingle{}mask\+Img\textquotesingle{} content. 
+
+
+
+Definition at line 56 of file Converter.\+cpp.
+
+
+
+References mask\+Img.
+
+
+
+Referenced by Visualizer\+::get\+Mask\+Img().
+
+\mbox{\Hypertarget{class_converter_a5d4c43bb79d93081b0359b9821ab83ba}\label{class_converter_a5d4c43bb79d93081b0359b9821ab83ba}} 
+\index{Converter@{Converter}!resetMaskImg@{resetMaskImg}}
+\index{resetMaskImg@{resetMaskImg}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{resetMaskImg()}{resetMaskImg()}}
+{\footnotesize\ttfamily void Converter\+::reset\+Mask\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset Mask image to initial state. 
+
+
+
+Definition at line 62 of file Converter.\+cpp.
+
+
+
+References base\+Img, and mask\+Img.
+
+
+
+Referenced by Visualizer\+::m\+Callback().
+
+\mbox{\Hypertarget{class_converter_afc5aa4ae2b38f0dd8d9418ced905e69d}\label{class_converter_afc5aa4ae2b38f0dd8d9418ced905e69d}} 
+\index{Converter@{Converter}!setBaseImg@{setBaseImg}}
+\index{setBaseImg@{setBaseImg}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{setBaseImg()}{setBaseImg()}}
+{\footnotesize\ttfamily void Converter\+::set\+Base\+Img (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{\+\_\+base\+Img }\end{DoxyParamCaption})}
+
+
+
+Setter for base Image. 
+
+Getter -\/ Returns \textquotesingle{}mask\+Img\textquotesingle{} content. 
+
+Definition at line 49 of file Converter.\+cpp.
+
+
+
+References base\+Img, and mask\+Img.
+
+
+
+Referenced by Visualizer\+::start\+Processing().
+
+\mbox{\Hypertarget{class_converter_aad973b1f41c37039e66c33a60cf28e39}\label{class_converter_aad973b1f41c37039e66c33a60cf28e39}} 
+\index{Converter@{Converter}!setDebug@{setDebug}}
+\index{setDebug@{setDebug}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{setDebug()}{setDebug()}}
+{\footnotesize\ttfamily void Converter\+::set\+Debug (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+debug }\end{DoxyParamCaption})}
+
+
+
+Setter for Debug. 
+
+Setter for \textquotesingle{}debug\textquotesingle{} parameter. 
+
+Definition at line 26 of file Converter.\+cpp.
+
+
+
+References debug.
+
+\mbox{\Hypertarget{class_converter_a96069954f786607da376b96401815216}\label{class_converter_a96069954f786607da376b96401815216}} 
+\index{Converter@{Converter}!setParams@{setParams}}
+\index{setParams@{setParams}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{setParams()}{setParams()}}
+{\footnotesize\ttfamily void Converter\+::set\+Params (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\+\_\+cl\+Dist\+Type,  }\item[{double}]{\+\_\+cl\+Dist\+Thr }\end{DoxyParamCaption})}
+
+
+
+Setter for parameters for pixel comparing. 
+
+
+
+Definition at line 32 of file Converter.\+cpp.
+
+
+
+References base\+Img, cl\+Dist\+Thr, and cl\+Dist\+Type.
+
+
+
+Referenced by Visualizer\+::start\+Processing().
+
+\mbox{\Hypertarget{class_converter_acc71625f678e032dbdd3c17e58580e4f}\label{class_converter_acc71625f678e032dbdd3c17e58580e4f}} 
+\index{Converter@{Converter}!setPoint@{setPoint}}
+\index{setPoint@{setPoint}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{setPoint()}{setPoint()}}
+{\footnotesize\ttfamily void Converter\+::set\+Point (\begin{DoxyParamCaption}\item[{const cv\+::\+Point \&}]{\+\_\+px\+Pos }\end{DoxyParamCaption})}
+
+
+
+Set Pixel point to be processed by main function. 
+
+
+
+Definition at line 78 of file Converter.\+cpp.
+
+
+
+References base\+Img, debug, px\+Pos, and px\+Val.
+
+
+
+Referenced by Visualizer\+::m\+Callback().
+
+\mbox{\Hypertarget{class_converter_afccc063ddf93903141b1fb629a7e1252}\label{class_converter_afccc063ddf93903141b1fb629a7e1252}} 
+\index{Converter@{Converter}!showMaskImg@{showMaskImg}}
+\index{showMaskImg@{showMaskImg}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{showMaskImg()}{showMaskImg()}}
+{\footnotesize\ttfamily void Converter\+::show\+Mask\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shows Image in Window. 
+
+
+
+Definition at line 68 of file Converter.\+cpp.
+
+
+
+References mask\+Img.
+
+
+
+Referenced by Visualizer\+::m\+Callback(), and Visualizer\+::show\+Mask\+Img().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_converter_a18f46c46afdfdbca3164cfe21b7f396d}\label{class_converter_a18f46c46afdfdbca3164cfe21b7f396d}} 
+\index{Converter@{Converter}!baseImg@{baseImg}}
+\index{baseImg@{baseImg}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{baseImg}{baseImg}}
+{\footnotesize\ttfamily cv\+::\+Mat Converter\+::base\+Img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains input test image. 
+
+
+
+Definition at line 19 of file Converter.\+h.
+
+
+
+Referenced by check\+Px\+Color(), check\+Px\+Pos(), Converter(), reset\+Mask\+Img(), set\+Base\+Img(), set\+Params(), and set\+Point().
+
+\mbox{\Hypertarget{class_converter_a1e0bff93aec2544cdecfb00db1006d0d}\label{class_converter_a1e0bff93aec2544cdecfb00db1006d0d}} 
+\index{Converter@{Converter}!clDistThr@{clDistThr}}
+\index{clDistThr@{clDistThr}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{clDistThr}{clDistThr}}
+{\footnotesize\ttfamily double Converter\+::cl\+Dist\+Thr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains inputed threshold value of the chosen color distance. 
+
+
+
+Definition at line 31 of file Converter.\+h.
+
+
+
+Referenced by check\+Px\+Color(), and set\+Params().
+
+\mbox{\Hypertarget{class_converter_a5d6037707465f267e1588735244be710}\label{class_converter_a5d6037707465f267e1588735244be710}} 
+\index{Converter@{Converter}!clDistType@{clDistType}}
+\index{clDistType@{clDistType}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{clDistType}{clDistType}}
+{\footnotesize\ttfamily uint8\+\_\+t Converter\+::cl\+Dist\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains inputed type of the color distance to be applied. 
+
+
+
+Definition at line 29 of file Converter.\+h.
+
+
+
+Referenced by check\+Px\+Color(), and set\+Params().
+
+\mbox{\Hypertarget{class_converter_a74f8e7af0fc2b296e50d29d0cc5f3651}\label{class_converter_a74f8e7af0fc2b296e50d29d0cc5f3651}} 
+\index{Converter@{Converter}!debug@{debug}}
+\index{debug@{debug}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily bool Converter\+::debug = \mbox{\hyperlink{namespace_def_params_a7e97783bd3e1a571a7f6c2297cbcd17c}{Def\+Params\+::\+D\+E\+B\+UG}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, whether output debug info or not. 
+
+
+
+Definition at line 27 of file Converter.\+h.
+
+
+
+Referenced by calc\+Pixel\+Distance(), check\+Px\+Color(), check\+Px\+Mask(), check\+Px\+Pos(), set\+Debug(), and set\+Point().
+
+\mbox{\Hypertarget{class_converter_a242e40c925fedcc92959bc76d24c77d5}\label{class_converter_a242e40c925fedcc92959bc76d24c77d5}} 
+\index{Converter@{Converter}!maskImg@{maskImg}}
+\index{maskImg@{maskImg}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{maskImg}{maskImg}}
+{\footnotesize\ttfamily cv\+::\+Mat Converter\+::mask\+Img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains obtained mask image. 
+
+
+
+Definition at line 21 of file Converter.\+h.
+
+
+
+Referenced by check\+Px\+Color(), check\+Px\+Mask(), Converter(), find\+Region(), get\+Mask\+Img(), reset\+Mask\+Img(), set\+Base\+Img(), and show\+Mask\+Img().
+
+\mbox{\Hypertarget{class_converter_af5ef027f6fd12d21306f669275664497}\label{class_converter_af5ef027f6fd12d21306f669275664497}} 
+\index{Converter@{Converter}!pxPos@{pxPos}}
+\index{pxPos@{pxPos}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{pxPos}{pxPos}}
+{\footnotesize\ttfamily cv\+::\+Point Converter\+::px\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains position of pixel selected by user. 
+
+
+
+Definition at line 23 of file Converter.\+h.
+
+
+
+Referenced by find\+Region(), and set\+Point().
+
+\mbox{\Hypertarget{class_converter_acf7b32e1932bc6c2bbbe7397c9f3e5c1}\label{class_converter_acf7b32e1932bc6c2bbbe7397c9f3e5c1}} 
+\index{Converter@{Converter}!pxVal@{pxVal}}
+\index{pxVal@{pxVal}!Converter@{Converter}}
+\subsubsection{\texorpdfstring{pxVal}{pxVal}}
+{\footnotesize\ttfamily cv\+::\+Vec3b Converter\+::px\+Val\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private variable, contains the color values of pixel selected by user. 
+
+
+
+Definition at line 25 of file Converter.\+h.
+
+
+
+Referenced by check\+Px\+Color(), and set\+Point().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_converter_8h}{Converter.\+h}}\item 
+src/\mbox{\hyperlink{_converter_8cpp}{Converter.\+cpp}}\end{DoxyCompactItemize}

@@ -7,7 +7,7 @@
 #include <opencv2/opencv.hpp>
 #include "../src/config.h"
 
-/*! \class Converter
+/*! \headerfile Converter.h "/src/Converter.h"
     \brief Header of class Converter
 
     Class calculates the contiguous region and converts it to the binary (mask) image.
