@@ -1,4 +1,5 @@
-/*! \class Converter
+/*! \file Converter.cpp
+	\class Converter Converter.cpp "/src/Converter.cpp"
     \brief Class calculates the contiguous region and converts it to the binary (mask) image.
 
     Class calculates the contiguous region and converts it to the binary (mask) image.
@@ -31,6 +32,16 @@ void Converter::setDebug(bool _debug) {
 void Converter::setParams(uint8_t _clDistType, double _clDistThr) {
 	clDistType = _clDistType;
 	clDistThr = _clDistThr;
+	switch (clDistType){
+		case 3: {
+			cv::cvtColor(baseImg, baseImg, cv::COLOR_BGR2Lab);
+			break;
+		}
+		case 4: {
+			cv::cvtColor(baseImg, baseImg, cv::COLOR_BGR2Lab);
+			break;
+		}
+	}
 }
 		
 

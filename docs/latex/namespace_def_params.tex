@@ -1,0 +1,212 @@
+\hypertarget{namespace_def_params}{}\section{Def\+Params Namespace Reference}
+\label{namespace_def_params}\index{DefParams@{DefParams}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr bool \mbox{\hyperlink{namespace_def_params_a7e97783bd3e1a571a7f6c2297cbcd17c}{D\+E\+B\+UG}} = false
+\item 
+constexpr const char $\ast$ \mbox{\hyperlink{namespace_def_params_a4ecb94d634ccb0839d655d8b4d49f10e}{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+N\+A\+ME}} = \char`\"{}test\+\_\+colored\+\_\+pils.\+png\char`\"{}
+\item 
+constexpr uint8\+\_\+t \mbox{\hyperlink{namespace_def_params_a96abaa9fd1fd3e492f2c968328d78cd7}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+D\+I\+S\+T\+\_\+\+T\+Y\+PE}} = 4
+\item 
+constexpr double \mbox{\hyperlink{namespace_def_params_a916e62b53c201e054434217cc5d70a0a}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+D\+I\+S\+T\+\_\+\+T\+H\+RD}} = 120
+\item 
+constexpr int \mbox{\hyperlink{namespace_def_params_a6e01701980f316db62c9b09a8f4a033d}{k\+\_\+L}} = 1/1
+\item 
+constexpr double \mbox{\hyperlink{namespace_def_params_ade015d45cc93072e45d278d5e5be7ebb}{K1}} = 0.\+045
+\item 
+constexpr double \mbox{\hyperlink{namespace_def_params_af4d7a411a81848498791ad3cf73ff4eb}{K2}} = 0.\+015
+\item 
+constexpr double \mbox{\hyperlink{namespace_def_params_af164df797c0355e3137b26b6cdae35a3}{SL}} = 1/1
+\item 
+constexpr double \mbox{\hyperlink{namespace_def_params_ace7abc998b941cb3abdff5202b95b54d}{F\+R256}} = 1/256
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+for distinguishing parameter names for sudden coincidence with parameters in other libraries 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_def_params_a7e97783bd3e1a571a7f6c2297cbcd17c}\label{namespace_def_params_a7e97783bd3e1a571a7f6c2297cbcd17c}} 
+\index{DefParams@{DefParams}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily constexpr bool Def\+Params\+::\+D\+E\+B\+UG = false}
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+E\+B\+UG} & Turn on/off debug info from code \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file config.\+h.
+
+
+
+Referenced by Visualizer\+::m\+Callback().
+
+\mbox{\Hypertarget{namespace_def_params_a916e62b53c201e054434217cc5d70a0a}\label{namespace_def_params_a916e62b53c201e054434217cc5d70a0a}} 
+\index{DefParams@{DefParams}!DEFAULT\_CLDIST\_THRD@{DEFAULT\_CLDIST\_THRD}}
+\index{DEFAULT\_CLDIST\_THRD@{DEFAULT\_CLDIST\_THRD}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{DEFAULT\_CLDIST\_THRD}{DEFAULT\_CLDIST\_THRD}}
+{\footnotesize\ttfamily constexpr double Def\+Params\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+D\+I\+S\+T\+\_\+\+T\+H\+RD = 120}
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+D\+I\+S\+T\+\_\+\+T\+H\+RD} & Default value of color distance metric threshold~\newline
+for type 0 try\+: 40~\newline
+for type 1 try\+: 60~\newline
+for type 2 try\+: 4000~\newline
+for type 3 try\+: 20~\newline
+for type 4 try\+: 120~\newline
+Note that T\+H\+RD values are squared comparing to the formulas in Wiki, for calculation simplicity. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file config.\+h.
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{namespace_def_params_a96abaa9fd1fd3e492f2c968328d78cd7}\label{namespace_def_params_a96abaa9fd1fd3e492f2c968328d78cd7}} 
+\index{DefParams@{DefParams}!DEFAULT\_CLDIST\_TYPE@{DEFAULT\_CLDIST\_TYPE}}
+\index{DEFAULT\_CLDIST\_TYPE@{DEFAULT\_CLDIST\_TYPE}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{DEFAULT\_CLDIST\_TYPE}{DEFAULT\_CLDIST\_TYPE}}
+{\footnotesize\ttfamily constexpr uint8\+\_\+t Def\+Params\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+D\+I\+S\+T\+\_\+\+T\+Y\+PE = 4}
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+L\+D\+I\+S\+T\+\_\+\+T\+Y\+PE} & Default type of color distance metric~\newline
+ 0 -\/ Simple R\+GB Euclidian distance~\newline
+1 -\/ Simple R\+GB Euclidian distance with weights (2, 4, 3 for R\+GB)~\newline
+2 -\/ Advanced R\+GB Euclidian distance with weights (2, 4, 3 for R\+GB) and additional coefficient~\newline
+4 -\/ Simple L\+AB distance, C\+I\+E76~\newline
+5 -\/ Advanced L\+AB distance, C\+I\+E94~\newline
+All distance metrics are taken from Wiki -\/ \href{https://en.wikipedia.org/wiki/Color_difference}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Color\+\_\+difference}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file config.\+h.
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{namespace_def_params_a4ecb94d634ccb0839d655d8b4d49f10e}\label{namespace_def_params_a4ecb94d634ccb0839d655d8b4d49f10e}} 
+\index{DefParams@{DefParams}!DEFAULT\_FNAME@{DEFAULT\_FNAME}}
+\index{DEFAULT\_FNAME@{DEFAULT\_FNAME}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{DEFAULT\_FNAME}{DEFAULT\_FNAME}}
+{\footnotesize\ttfamily constexpr const char$\ast$ Def\+Params\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+N\+A\+ME = \char`\"{}test\+\_\+colored\+\_\+pils.\+png\char`\"{}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+N\+A\+ME} & Default test image name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file config.\+h.
+
+
+
+Referenced by main().
+
+\mbox{\Hypertarget{namespace_def_params_ace7abc998b941cb3abdff5202b95b54d}\label{namespace_def_params_ace7abc998b941cb3abdff5202b95b54d}} 
+\index{DefParams@{DefParams}!FR256@{FR256}}
+\index{FR256@{FR256}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{FR256}{FR256}}
+{\footnotesize\ttfamily constexpr double Def\+Params\+::\+F\+R256 = 1/256}
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+R256} & Parameter value for type 4 distance, C\+I\+E94 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file config.\+h.
+
+
+
+Referenced by Converter\+::calc\+Pixel\+Distance().
+
+\mbox{\Hypertarget{namespace_def_params_ade015d45cc93072e45d278d5e5be7ebb}\label{namespace_def_params_ade015d45cc93072e45d278d5e5be7ebb}} 
+\index{DefParams@{DefParams}!K1@{K1}}
+\index{K1@{K1}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{K1}{K1}}
+{\footnotesize\ttfamily constexpr double Def\+Params\+::\+K1 = 0.\+045}
+
+
+\begin{DoxyParams}{Parameters}
+{\em K1} & Parameter value for type 4 distance, C\+I\+E94 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 38 of file config.\+h.
+
+
+
+Referenced by Converter\+::calc\+Pixel\+Distance().
+
+\mbox{\Hypertarget{namespace_def_params_af4d7a411a81848498791ad3cf73ff4eb}\label{namespace_def_params_af4d7a411a81848498791ad3cf73ff4eb}} 
+\index{DefParams@{DefParams}!K2@{K2}}
+\index{K2@{K2}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{K2}{K2}}
+{\footnotesize\ttfamily constexpr double Def\+Params\+::\+K2 = 0.\+015}
+
+
+\begin{DoxyParams}{Parameters}
+{\em K2} & Parameter value for type 4 distance, C\+I\+E94 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file config.\+h.
+
+
+
+Referenced by Converter\+::calc\+Pixel\+Distance().
+
+\mbox{\Hypertarget{namespace_def_params_a6e01701980f316db62c9b09a8f4a033d}\label{namespace_def_params_a6e01701980f316db62c9b09a8f4a033d}} 
+\index{DefParams@{DefParams}!k\_L@{k\_L}}
+\index{k\_L@{k\_L}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{k\_L}{k\_L}}
+{\footnotesize\ttfamily constexpr int Def\+Params\+::k\+\_\+L = 1/1}
+
+
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+L} & Parameter value for type 4 distance, C\+I\+E94 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file config.\+h.
+
+
+
+Referenced by Converter\+::calc\+Pixel\+Distance().
+
+\mbox{\Hypertarget{namespace_def_params_af164df797c0355e3137b26b6cdae35a3}\label{namespace_def_params_af164df797c0355e3137b26b6cdae35a3}} 
+\index{DefParams@{DefParams}!SL@{SL}}
+\index{SL@{SL}!DefParams@{DefParams}}
+\subsubsection{\texorpdfstring{SL}{SL}}
+{\footnotesize\ttfamily constexpr double Def\+Params\+::\+SL = 1/1}
+
+
+\begin{DoxyParams}{Parameters}
+{\em SL} & Parameter value for type 4 distance, C\+I\+E94 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file config.\+h.
+
+
+
+Referenced by Converter\+::calc\+Pixel\+Distance().
+

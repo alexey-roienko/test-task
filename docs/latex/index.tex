@@ -1,0 +1,35 @@
+Utility allows finding the contiguous region around the pixel selected by user on a colored image.~\newline
+Utility has three non-\/obligatory parameters\+:~\newline
+
+\begin{DoxyEnumerate}
+\item $<$test\+\_\+image$>$ -\/ images should be located in \textquotesingle{}\textbackslash{}input\textquotesingle{}-\/folder~\newline
+
+\item $<$cl\+\_\+dist\+\_\+type$>$ -\/ int, \mbox{[}0; 4\mbox{]}, the type of color distance which will be applied by algorithm~\newline
+
+\item $<$cl\+\_\+dist\+\_\+thld$>$ -\/ double, $>$0, the threshold value for defining the pixels similarity~\newline
+~\newline
+Syntacsis\+: ~\newline
+ find\+Contig\+Reg ~\newline
+ find\+Contig\+Reg $<$test\+\_\+image$>$~\newline
+ find\+Contig\+Reg $<$test\+\_\+image$>$ $<$cl\+\_\+dist\+\_\+type$>$~\newline
+ find\+Contig\+Reg $<$test\+\_\+image$>$ $<$cl\+\_\+dist\+\_\+type$>$ $<$cl\+\_\+dist\+\_\+thld$>$~\newline
+ ~\newline
+ (for default values see \mbox{\hyperlink{config_8h}{config.\+h}})~\newline
+ ~\newline
+Commands\+: ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item press L\+E\+FT mouse button on the I\+N\+P\+UT I\+M\+A\+GE window for choosing the initial pixel;~\newline
+
+\item press \textquotesingle{}q\textquotesingle{} for exit the program (should be pressed while the \textquotesingle{}Base image\textquotesingle{} window is active).
+\end{DoxyItemize}
+
+Builded on the Windows 10 x64, open\+CV version -\/ 3.\+4.\+4, C\+Make and Min\+GW were used.
+
+\begin{DoxyAuthor}{Author}
+Created by Alexey Roienko
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Feb. 2019. 
+\end{DoxyDate}

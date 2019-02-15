@@ -1,4 +1,4 @@
-/*! \class Visualizer
+/*! \headerfile Visualizer.h "/scr/Visualizer.h"
     \brief Displays the test image as well as calculated image binary mask
 
     Class displays the test image as well as calculated image binary mask
