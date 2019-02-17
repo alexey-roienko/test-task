@@ -1,6 +1,8 @@
-# Gitignore-file for removing from tracking the 'build' folder
-build/
-# but remain tracking of program .exe file
+# Remain tracking of program .exe file
 !build/*.exe
+!build_l/findContigReg
+# Gitignore-file for removing from tracking the 'build' and 'build_l' folders
+build/
+build_l/
 # And also no need to track the task doc-file
 C++2FCV developer test assigment.docx
